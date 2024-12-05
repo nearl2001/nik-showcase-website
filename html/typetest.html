@@ -7,17 +7,23 @@
   <link rel="stylesheet" href="../styles/typetestStyles.css">
 </head>
 <body>
+  <div id="activeToggle">
+    <input type="checkbox" id="activeToggleSwitch" value="Toggle Active WPM Reporting"/>
+    <p>Toggle Active WPM Reporting</p>
+  </div>
+
   <div class="container">
     <div id="text-container">
       <div id="target-text"></div>
       <div id="typed-text"></div>
     </div>
-    <input type="text" id="input-box" autofocus placeholder="" />
+    <input type="text" id="input-box" autofocus autocomplete="off" placeholder="" />
     <div class="stats">
-      <span id="wpm">WPM: 0</span>
-      <button id="reset-button">Restart</button>
+      <span id="wpm">WPM: ---</span>
+      <div id="separator"></div>
+      <button id="reset-button">New Phrase</button>
     </div>
   </div>
-  <script src="../javascript/typetestScript.js"></script>
+  <script type="module" src="../javascript/typetestScript.js"></script>
 </body>
 </html>
