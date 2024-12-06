@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typing Test</title>
+  <link rel="stylesheet" href="../styles/typetestStyles.css">
+</head>
+<body>
+  <div class="common header">
+    <span class="subheader">
+      <a href="../index.html"><img src="../images/home_icon.svg" alt="Homepage" id="homeIcon"></a>
+      <a href="./resume.html"><img src="../images/resume_icon.svg" alt="Resume" id="resumeIcon"></a>
+      <a href="./aboutme.html"><img src="../images/about_me.svg" alt="About Me" id="aboutIcon"></a>
+    </span>
+  </div>
+
+  <div id="activeToggle">
+    <input type="checkbox" id="activeToggleSwitch" value="Toggle Active WPM Reporting"/>
+    <p>Toggle Active WPM Reporting</p>
+  </div>
+
+  <div class="container">
+    <div id="text-container">
+      <div id="target-text"></div>
+      <div id="typed-text"></div>
+    </div>
+    <input type="text" id="input-box" autofocus autocomplete="off" placeholder="" />
+    <div class="stats">
+      <span id="wpm">WPM: ---</span>
+      <div id="separator"></div>
+      <button id="reset-button">New Phrase</button>
+    </div>
+  </div>
+  <script type="module" src="../javascript/typetestScript.js"></script>
+</body>
+</html>
