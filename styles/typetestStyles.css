@@ -1,4 +1,12 @@
-@keyframes colorWheel {
+  .container {
+    text-align: center;
+    width: 80%;
+    max-width: 800px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  @keyframes colorWheel {
     0% {
       background-color: rgb(60, 0, 0);
     }
@@ -22,23 +30,22 @@
     }
   }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #cdd6f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    overflow: hidden;
+.glamourTransition {
+    background-color: rgb(60, 0, 0);
+}
+
+.glamourFadeOut {
+    transition: background-color 0.5s;
+}
+
+.glamourBody {
     animation: colorWheel 15s infinite linear;
+    transition: background-color 0.5s;
+}
 
-  }
-
-  .container {
-    text-align: center;
-    width: 80%;
-    max-width: 800px;
+  body {
+    background-color: black;
+    color: white;
   }
 
   #activeToggle {
@@ -63,7 +70,7 @@ body {
     font-size: 28px;
     color: rgba(255, 255, 255, 0.5);
     position: fixed;
-    top: 40vh;
+    top: calc(max(100px, 60vh - 200px));
     left: 15vw;
     right: 0;
     z-index: 1;
@@ -71,7 +78,7 @@ body {
   }
   
   #typed-text {
-    top: 40vh;
+    top: calc(max(100px, 60vh - 200px));
     left: 15vw;
     width: 70vw;
     font-size: 28px;
