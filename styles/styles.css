@@ -78,6 +78,10 @@ h3 {
     margin-block-end: 0;
 }
 
+.spacer {
+    height: 100px;
+}
+
 .scrollSpacer {
     margin-top: 30vh;
 }
