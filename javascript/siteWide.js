@@ -1,5 +1,6 @@
 // DOM Elements
 const glamourButton = document.getElementById("glamourIcon");
+const colorhint = document.getElementsByClassName("colorhint")[0];
 const body = document.body;
 
 let glamourMode = false;
@@ -21,5 +22,6 @@ glamourButton.addEventListener("click", () => {
         }, 500) // Transition to the glamourBody after transition done
 
         glamourMode = true;
+        colorhint.className += " glamourOn"
     }
 })
