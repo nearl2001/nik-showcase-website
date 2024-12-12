@@ -6,6 +6,13 @@
     justify-content: space-evenly;
   }
 
+  @media(max-width: 700px) {
+    #target-text, #typed-text {
+      top: 200px !important;
+      transition: top 0.5s cubic-bezier(0, 0.84, 0.23, 0.99);
+    }
+  }
+
   @keyframes colorWheel {
     0% {
       background-color: rgb(60, 0, 0);
@@ -67,25 +74,26 @@
   }
   
   #target-text {
-    font-size: 28px;
     color: rgba(255, 255, 255, 0.5);
-    position: fixed;
-    top: calc(max(100px, 60vh - 200px));
-    left: 15vw;
     right: 0;
     z-index: 1;
-    width: 70vw;
   }
   
   #typed-text {
-    top: calc(max(100px, 60vh - 200px));
-    left: 15vw;
-    width: 70vw;
     font-size: 28px;
     color: transparent;
     position: fixed;
     z-index: 2;
     background: none;
+  }
+
+  #typed-text, #target-text {
+    top: calc(max(155px, 45vh - 200px));
+    left: 15vw;
+    width: 70vw;
+    position: fixed;
+    font-size: 28px;
+    transition: top 0.5s cubic-bezier(0, 0.84, 0.23, 0.99);
   }
   
   #typed-text span {
